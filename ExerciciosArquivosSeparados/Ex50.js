@@ -32,6 +32,11 @@ let reservas = [
         idHotel: 1,
         nomeCliente: 'Luan Marques'
     },
+    {
+        id: 2,
+        idHotel: 1,
+        nomeCliente: 'Luan Marques'
+    },
 ]
 
 while (condition) {
@@ -108,7 +113,7 @@ function fazerReserva(listaHoteis, reservas) {
     if (hotel && hotel.quartosDisponiveis > 0) {
         hotel.quartosDisponiveis--
 
-        let idReserva = reservas.length + 1;
+        let idReserva = Math.floor(Date.now() * Math.random()).toString(36);
 
         let reserva = {
             id: idReserva,
